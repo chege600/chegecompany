@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chege Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f5f5f5, #e6e6e6);
+            color: #1a2b3c;
+            text-align: center;
+        }
+        header {
+            background-color: #0b2e41;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+        }
+        header img {
+            height: 80px;
+        }
+        nav button {
+            background: #f15a29;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            color: white;
+        }
+        nav button:hover {
+            background: #c4431d;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .about {
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            background: #0b2e41;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+        .highlight {
+            background: #fff5f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Chege Company Logo">
+        <h1>Welcome to Chege Company</h1>
+        <nav>
+            <button onclick="showSection('about')">About Us</button>
+            <button onclick="showSection('services')">Services</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Chege Company is a forward-thinking Kenyan startup dedicated to innovation, quality, and service. We aim to provide outstanding products and solutions while upholding values of integrity, growth, and community impact.</p>
+    </section>
+
+    <section id="services" class="about" style="display:none;">
+        <h2>Our Services</h2>
+        <div class="highlight">
+            <p>We provide tailored solutions in engineering, technology, and business consultancy. Our approach blends creativity with technical expertise to help our clients succeed.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="about" style="display:none;">
+        <h2>Contact Us</h2>
+        <p>Email: info@chegecomppany.co.ke</p>
+        <p>Phone: +254 712 345 678</p>
+    </section>
+
+    <footer>
+        &copy; 2025 Chege Company. All rights reserved.
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
